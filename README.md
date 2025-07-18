@@ -35,7 +35,7 @@ Principais arquivos:
 Contém o servidor Node.js com Express e a configuração do Prisma.  
 Principais arquivos:
 
-- `index.js`: define as rotas da API (`GET` e `POST` para `/usuarios`)
+- `index.js`: define as rotas da API (`GET` , `POST` e `DELETE` para `/usuarios`)
 - `schema.prisma`: define o modelo de dados do banco (tabela `User`)
 - `.env`: define o banco de dados usado pelo Prisma (MongoDB por padrão)
 

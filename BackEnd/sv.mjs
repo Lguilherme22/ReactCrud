@@ -24,11 +24,30 @@ app.post("/usuarios", async (req, res) => {
     res.status(500).json({ error: "Erro ao salvar usuário" });
   }
 });
-
+//lista usuario
 app.get("/usuarios", async (req, res) => {
   const users = await prisma.user.findMany();
   res.json(users);
 });
+
+// Deletar usuário
+app.delete("/usuarios/:id", async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    await prisma.user.delete({
+      where: {
+        id,
+      },
+    });
+
+    res.status(204).send(); 
+  } catch (error) {
+    console.error("Erro ao deletar usuário:", error);
+    res.status(500).json({ error: "Erro ao deletar usuário" });
+  }
+});
+
 
 app.listen(3000, () => {
   console.log("Servidor rodando em http://localhost:3000");

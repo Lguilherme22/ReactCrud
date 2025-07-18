@@ -31,9 +31,18 @@ function Home() {
       inputAge.current.value = "";
       inputEmail.current.value = "";
 
-      getUsers(); 
+      getUsers();
     } catch (error) {
       console.error("Erro ao cadastrar usuário:", error);
+    }
+  }
+
+  async function deleteUser(id) {
+    try {
+      await api.delete(`/usuarios/${id}`);
+      getUsers(); // Atualiza a lista após deletar
+    } catch (error) {
+      console.error("Erro ao deletar usuário:", error);
     }
   }
 
@@ -60,7 +69,7 @@ function Home() {
             <p>Email: {user.email}</p>
           </div>
 
-          <button>
+          <button onClick={() => deleteUser(user.id)}>
             <img src={Trash} alt="Excluir" />
           </button>
         </div>

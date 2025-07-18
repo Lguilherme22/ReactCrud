@@ -64,7 +64,6 @@ Principais arquivos:
 - npm install
 - npm run dev
 
----
 
 - O frontend ficará disponível em: http://localhost:5173O
 

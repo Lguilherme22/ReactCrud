@@ -50,25 +50,25 @@ Principais arquivos:
 
 ### 1. Instalar e rodar o backend
 
-cd backend
-npm install
-npx prisma generate
-npx prisma migrate dev --name init
-npm start 
+- cd backend
+- npm install
+- npx prisma generate
+- npx prisma migrate dev --name init
+- npm start 
 
 ---
 
 ### 2. Instalar e rodar o frontend
 
-cd ../frontend
-npm install
-npm run dev
+- cd ../frontend
+- npm install
+- npm run dev
 
 ---
 
-O frontend ficará disponível em: http://localhost:5173O
+- O frontend ficará disponível em: http://localhost:5173O
 
 ---
 
 👨‍💻 Autor
-Desenvolvido por Luís Guilherme Barros Rosa
+- Desenvolvido por Luís Guilherme Barros Rosa

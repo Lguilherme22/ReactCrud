@@ -11,6 +11,7 @@ Este projeto é uma aplicação fullstack para cadastro e listagem de usuários,
 ## ✨ Funcionalidades
 
 - Cadastro de usuários (nome, idade, e-mail)
+- Exclusão de usuários
 - Listagem dos usuários cadastrados
 - Atualização automática da lista após cada cadastro
 - Integração entre frontend e backend via API
